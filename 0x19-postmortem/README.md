@@ -1,6 +1,7 @@
 
 
 POSTMORTEM: UNAUTHORIZED ACCESS TO CUSTOMER DATABASE
+
 Incident Description:
 On 9th June, 2024, at 02:30 hours, an external security alert from our intrusion detection system (IDS) indicated suspicious activity originating from an unknown IP address. This led to a Global outage of our web application firewall resulting into;-
 • 100% of incoming web traffic not being filtered for security threats
@@ -32,7 +33,10 @@ The security team drafts a communication plan to inform affected customers about
 This includes details of the breach, the data potentially compromised, and steps taken to mitigate the risk.
 09:00:
 An official communication is sent to affected customers via email, explaining the incident and outlining recommended actions, such as password resets.
+
 Root Cause Analysis:
+
+
 
 
 The root cause of the incident was a successful SQL injection attack against a vulnerable web application server. The attacker exploited a misconfigured Web Application Firewall that allowed them to inject malicious SQL code into database queries. This ultimately granted them unauthorized access to the customer database.
