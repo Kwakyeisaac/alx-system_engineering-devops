@@ -1,8 +1,8 @@
 
 
-POSTMORTEM: UNAUTHORIZED ACCESS TO CUSTOMER DATABASE
+**POSTMORTEM: UNAUTHORIZED ACCESS TO CUSTOMER DATABASE**
 
-Incident Description:
+**Incident Description:**
 
 On 9th June, 2024, at 02:30 hours, an external security alert from our intrusion detection system (IDS) indicated suspicious activity originating from an unknown IP address. This led to a Global outage of our web application firewall resulting into;-
 
@@ -10,26 +10,26 @@ On 9th June, 2024, at 02:30 hours, an external security alert from our intrusion
 • 40% of customer websites exposed to potential security breaches
 • Increased risk of DDoS attacks and data breaches
 
-Timeline:
+**Timeline**:
 
-9th June, 2024
+**9th June, 2024**
 
-02:31:
+**02:31:**
 
 Intrusion Detection System (IDS) triggered an alert for suspicious activity targeting a web application server and also an alert triggered for WAF system failure
 The alert indicates attempted exploitation of a SQL injection vulnerability.
 
-02:50:
+**02:50:**
 The security team noticed WAF system not responding and began investigating to identify the source of the attack.
 The team isolates the web application server to prevent further unauthorized access attempts.
 Initial assumption was network connectivity issue, investigation focused on routing and switching equipment
 
-02:50:
+**02:50:**
 The team analyzed server logs to determine the extent of the breach.
 Initial investigation suggests a successful SQL injection attack, potentially compromising a customer database.
 Also discovered software bug in Web Application Firewall system's rule update process
 
-03:30:
+**03:30:**
 The team identifies the specific customer data accessed during the breach.
 This includes customer names, email addresses, and hashed passwords.
 
